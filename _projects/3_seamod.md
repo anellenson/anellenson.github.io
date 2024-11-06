@@ -5,6 +5,7 @@ description: Site Energy Assessment MOnitoring Dashboard - Providing wave metric
 img: assets/img/seamod/datadisplay.png
 importance: 3
 category: Integral
+related_publications: true 
 ---
 
 
@@ -70,7 +71,7 @@ The gridded data were post-processed to calculate additional variables for SEAMO
     Processing routine to calculate the SEAMOD variables.
 </div>
 
-Ultimately, the processing routine was loaded into a backend database and served to the client via an API. The front-end was written in R-Shiny.
+Ultimately, the processing routine was loaded into a backend database and served to the client via an API. The front-end was written in R-Shiny. I then presented on my methods at {% cite ellenson2024building %}
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">

@@ -20,10 +20,7 @@ related_publications: true
     Visualization of peel angle. The peel angle is defined as the angle between the wave front and the wave path. The wave path can be seen as tracing the edge of the whitewater in the image (red line), and the wave front are the wave faces (orange lines) as the wave bends around the whitewater.
 </div>
  
-
 In surf assessments, surfing resources are assessed pre- and post- construction quantitatively using wave models. This requires calculating a wave quality metric called "peel angle." 
-
-
 
 For this project, I ran a wave model (non-hydrostatic <a href="https://oss.deltares.nl/web/xbeach/"> X-Beach </a>) for different scenarios, and then developed an algorithm to extract peel angle from the wave model.
 
@@ -73,4 +70,4 @@ We can compare peel angles from different scenarios by plotting peel angle as a 
     <b> Bottom: </b> Comparison of three conditions: baseline; no project; with project (with Restoration). The peel angle curves allow us to visualize how the peel angle will be affected with the project. 
 </div>
 
-We found that the project would result in minimal impacts to the surfing wave, despite the surfer fears that it would. We presented at a meeting between the Resources Conservation District (RCD) and the surfing stakeholders. The result was a success! The surfers validated the peel angle baseline conditions, and signed off on the project's completion.
+We found that the project would result in minimal impacts to the surfing wave, despite the surfer fears that it would. We presented at a meeting between the Resources Conservation District (RCD) and the surfing stakeholders which you can see in  {% cite ellenson_csbpa %} and in {% cite revell_asbpa %}. The result was a success! The surfers validated the peel angle baseline conditions, and signed off on the project's completion.
