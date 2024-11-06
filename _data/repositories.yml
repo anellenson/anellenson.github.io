@@ -1,0 +1,8 @@
+github_users:
+  - anellenson
+
+repo_description_lines_max: 2
+
+github_repos:
+  - anellenson/DeepBeachState
+  - anellenson/DecisionTree_WaveForecasting
