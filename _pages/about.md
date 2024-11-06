@@ -14,7 +14,7 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Hey everyone! I'm a data scientist/coastal scientist that loves the beach and the ocean. My work focuses on understanding the beach - and helping others understand the beach - through the lens of big data. 
+Hey everyone! I'm a data scientist/coastal scientist that loves the beach and the ocean. My work focuses on understanding the beach - and helping others understand the beach - through the lens of data. I have a strong technical foundation in nearshore coastal dynamics and machine learning from my PhD, and I've been working as a consultant in the coastal space with <a href="www.integral-corp.com"> Integral Corporation </a>
 
 Within data science, I'm interested in using data to understand processes - can correlations and trends translate to understanding causation? I believe that data - and powerful data mining techniques - can unlock patterns that are otherwise imperceivable by using manual techniques alone. Tool development and automation follow, hopefully to augment and support data science research, ultimately resulting in even more powerful insights.
 

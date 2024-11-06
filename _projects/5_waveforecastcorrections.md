@@ -5,7 +5,7 @@ description: Increasing wave model accuracy and determining wave model error reg
 img: assets/img/decisiontree/scatterplot.jpg
 importance: 6
 category: PhD
-related_)publications: true
+related_publications: true
 ---
 
 <br>
@@ -24,7 +24,7 @@ related_)publications: true
     <b> Right </b> Scatter plot of original wave height versus observations (left), and corrected wave height versus observations (right). 
 </div>
 
-In this paper, I correct wave height time series using a machine learning technique called bagged regression tree. The wave height output time series was taken from <a href="gabe'spaper"> Wave Watch 3 </a>. The output was divided between winter and summer, and the bagged regression tree was trained on the error between wave model output (wave height time series) and observed time series (at various <a href="www.ndbc.com"> National Data Buoy Center </a> buoys) with wave model input as features (wave height, wave direction, mean wave period). Several experiments were made with wind (wind magnitude, wind direction) as well. A final experiment was also performed where a decision tree was trained on several buoys and applied on the original buoy that was not included in the dataset in a geospatial experiment.
+In this paper, I correct wave height time series using a machine learning technique called bagged regression tree. The wave height output time series was taken from <a href="https://www.sciencedirect.com/science/article/abs/pii/S0960148113005922"> Wave Watch 3 </a>. The output was divided between winter and summer, and the bagged regression tree was trained on the error between wave model output (wave height time series) and observed time series (at various <a href="www.ndbc.noaa.gov"> National Data Buoy Center </a> buoys) with wave model input as features (wave height, wave direction, mean wave period). Several experiments were made with wind (wind magnitude, wind direction) as well. A final experiment was also performed where a decision tree was trained on several buoys and applied on the original buoy that was not included in the dataset in a geospatial experiment.
 
 The cool thing about decision tree is that it can be used to diagnose model operating conditions - which features were most important to determine wave height error? This can tell us how the model performs for different regimes defined by its own output.
 
