@@ -1,81 +1,81 @@
 ---
 layout: page
-title: Identifying Sandbars with a Convolutional Neural Network
-description: Automating the identification of sandbars in Argus imagery for different beaches
-img:
-importance: 7
+title: Identifying Sandbars in Coastal Images with a Convolutional Neural Network
+description: Automating the identification of sandbars in imagery for different beaches
+img: assets/img/decisiontree/saliencymaps.jpg
+importance: 6
 category: PhD
 related_publications: true
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+<h3> How can we leverage the decades worth of coastal imagery to get more information about sandbars? </h3>
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+In this research, I developed a deep learning framework  (Convolutional Neural Network) to identify sandbars in the coastal (nearshore) zone. 
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+Sandbars play a role in recreation, navigation, erosion and pollutant transport. They are landforms in the coast near the beach that determine wave breaking and circulation patterns. Feedback between sediment transport and waves - and sometimes the waves themselves - will determine what shape the sandbars will take on. The different sandbar categories are shown below, and <a href="https://www.sciencedirect.com/science/article/abs/pii/0025322784900082"> were developed in the 80s </a>. Distinctions between the categories are due to features such as curviness (vs straightness), attachment to the shoreline (vs trough), rip currents existing or not.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/decisiontree/duck_beachstates.jpg" title="Beach State Categories" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
+    Day time exposure images of Argus imagery showing sandbars and the different associated categories. The images are shown from a "bird's eye" perspective, where the land is colored dark on the top of the image, and the sandbars are white signatures on the gray water.  
 </div>
+
+The sandbar categories readily lend themselves to training a supervised convolutional neural network. Also, a plethora of data from <a href="https://en.wikipedia.org/wiki/Argus_Coastal_Monitoring"> Argus stations </a> around the world was also readily available as training and testing data. I use data from Duck, North Carolina and Narrabeen, Australia.
+
+However, a challenge arose in that the sandbars didn't always fall neatly into distinct categories, leading to the question of how to assess CNN accuracy for a method that requires distinct labelling. To establish baseline accuracy standard, the images were manually labelled and the "inter-labeller agreement" f1 score was taken as the accuracy standard, shown below. 
+
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/decisiontree/labelvscnn.jpg" title="Inter-labeller Agreement" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    This image can also have a caption. It's like magic.
+    Interlabeller agreement that set the accuracy basline for each category. 
 </div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+The CNN was trained on images that I manually picked out and labelled, trying to find the most discrete categories within the entire dataset. I used image augmentation to increase the training dataset size.
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/decisiontree/CNNtrainingmethod.jpg" title="CNN Training Method" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
+    Development of the CNN including training and testing flows.
 </div>
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+We also performed several experiments: 
+<li> CNN trained at one location and tested at the same location
+<li> CNN trained at one location and tested at separate location
+<li> CNN trained at both locations and tested at both locations
 
-{% raw %}
-
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/decisiontree/fscore.jpg" title="F Score" class="img-fluid rounded z-depth-1" %}
+    </div>
 </div>
-```
+<div class="caption">
+    F-score for the three CNN experiments. The color designates where the CNN was trained, and the different columns are where the CNN was tested.
+</div>
 
-{% endraw %}
+Overall, the CNN performed similar to the baseline accuracy standard. Performance was lower for Narrabeen than for Duck. The CNN trained at Duck performed well at Narrabeen, but the CNN trained at Narrabeen did not perform well at Duck. 
+
+Finally, transparency of the CNN decision making was assessed, trying to answer the question - how can we trust the CNN is looking at the right things? Saliency maps show which features are most important to the CNN for making decision.
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/decisiontree/saliencymaps.jpg" title="Saliency Maps" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Saliency maps where the colored pixels show which features the CNN were most relevant in the decision making. 
+</div>
+
+To read more or see the code development, check out the paper {% cite ellenson2020beach %} and the github repo. 
+
+<div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
+    {% include repository/repo.liquid repository='anellenson/DeepBeachState' %}
+</div>
