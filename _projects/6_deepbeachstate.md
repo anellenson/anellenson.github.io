@@ -2,7 +2,7 @@
 layout: page
 title: Identifying Sandbars in Coastal Images with a Convolutional Neural Network
 description: Automating the identification of sandbars in imagery for different beaches
-img: assets/img/decisiontree/saliencymaps.jpg
+img: assets/img/beachstates/saliencymaps.jpg
 importance: 6
 category: PhD
 related_publications: true
@@ -16,7 +16,7 @@ Sandbars play a role in recreation, navigation, erosion and pollutant transport.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/decisiontree/duck_beachstates.jpg" title="Beach State Categories" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/beachstates/duck_beachstates.jpg" title="Beach State Categories" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -29,7 +29,7 @@ However, a challenge arose in that the sandbars didn't always fall neatly into d
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/decisiontree/labelvscnn.jpg" title="Inter-labeller Agreement" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/beachstates/labelvscnn.jpg" title="Inter-labeller Agreement" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -40,7 +40,7 @@ The CNN was trained on images that I manually picked out and labelled, trying to
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/decisiontree/CNNtrainingmethod.jpg" title="CNN Training Method" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/beachstates/CNNtrainingmethod.jpg" title="CNN Training Method" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -54,7 +54,7 @@ We also performed several experiments:
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/decisiontree/fscore.jpg" title="F Score" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/beachstates/fscore.jpg" title="F Score" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -67,7 +67,7 @@ Finally, transparency of the CNN decision making was assessed, trying to answer 
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/decisiontree/saliencymaps.jpg" title="Saliency Maps" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/beachstates/saliencymaps.jpg" title="Saliency Maps" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
