@@ -2,96 +2,105 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
+      value: Ashley Ellenson
+    - name: Location
+      value: Santa Cruz, California, USA
     - name: Languages
-      value: English, German
+      value: English, Hebrew, Spanish (conversational), German (conversational)
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: PhD 
+      institution: Oregon State University
+      year: 2021
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
+        - Coastal and Ocean Engineering  
+        - Minor in Risk and Uncertainty Quantification
+       
+    - title: Masters of Science
+      institution: Oregon State University
+      year: 2017
       description:
-        - Description 1.
-        - Description 2.
-
-- title: Experience
-  type: time_table
-  contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+        - Coastal and Ocean Engineering  
+    - title: Bachelor of Science
+      institution: Columbia University
+      year: 2011
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
-      description:
-        - Description 1.
-        - Description 2.
+        - Earth and Environmental Engineering
+        - Concentration in Water Quality
 
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
-      description:
-
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Open Source Projects
-  type: time_table
-  contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
-
-- title: Honors and Awards
-  type: time_table
-  contents:
-    - year: 1921
-      items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
-      items:
-        - Max Planck Medal
-
-- title: Academic Interests
-  type: nested_list
-  contents:
-    - title: Topic 1.
-      items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
-      items:
-        - Description 1.
-        - Description 2.
-
-- title: Other Interests
+- title: Technical Skills
   type: list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - <b>Programming Languages:</b> Python, R, MATLAB, PostgreSQL
+    - <b>Data Science:</b> Data visualization (matplotlib, seaborn), machine learning (sci-kit learn, pytorch),
+        data manipulation and analysis (dask, pandas, x-array), cloud computing
+        (digital ocean, s3 buckets, docker), documentation (sphinx), GitHub
+    - <b>Numerical Models:</b> Wavewatch III, SWAN, X-BEACH, Delft3D
+
+- title: Professional and Academic Experience
+  type: time_table
+  contents:
+    - title: Project Scientist
+      institution: Integral Consulting
+      year: 2022-current
+      description:
+        - title: <b> Coastal Resilience </b>
+          contents:
+            - Quantified coastal risk hazard due to cliff erosion or coastal flooding using physical and empirical models to determine erosion and flooding distances and depths.
+            - Determine decadal shoreline change using satellite imagery and CoastSat tool.
+            - Prepared reports and presentations to communicate findings to external clients.
+        - title: <b> Data Management and Analytics </b>
+          contents:
+            - Developed internal tools for data processing, analysis and plotting for subsequent re-use to increase efficiency and task standardization.
+            - Developed data pipeline to process 30 years of hourly time series data over 15 grids of 8 different wave parameters as input to wave data dashboard from raw wave output to PostGRES database.
+            - Developed interactive plots in R for data visualization in dashboard.
+    
+    - title: Graduate Student Fellow
+      institution: Oregon State University
+      year: 2018-2021
+      description: 
+        - Applied Convolutional Neural Networks at two different sites to identify sandbars in 5000+ coastal images
+        - Determined most relevant environmental forcing for sandbar evolution via correlations between time series of sandbar shape and environmental factors.
+        - Generated ensembles of sadnbar forecasts usingXBeach to quantify state dependent uncertainty for use in a data assimilation scheme
+        - Sought international collaboration from University of New South Wales-Sydney and led research between four researchers and three institutions
+
+    - title: Founder of Rip Rap, the Surf App
+      institution:  Coastal Conditions
+      year: 2017-2018
+      description:
+        - Worked in an incubator on a start up to develop wave forecasts for surfers
+        - Iterated on product/market fit for surfers
+        - Led a team of UI/UX designers and developers to build minimum viable product
+        - Marketed product and company through news outlets (Surfer Online Magazine and NPR)
+
+    - title: National Research Trainee
+      institution: Oregon State University
+      year: 2017-2018
+      description:
+        - Quantified uncertainty metrics of wave forecast error predictions using bagged regression tree
+        - Collaborated with social scientist and data imaging specialist to develop forecast uncertainty metric
+        - Used decision tree as an explanatory technique to determine relationships between environmental conditions that coincided with wave model error
+        - Determined geospatial relationships between 5 different buoy locations of wave height error over 5 years of wave height time series through inspection of bagged regression tree architecture
+
+- title: Open Source Code 
+  type: time_table
+  contents:
+  - title: <a href="https://github.com/anellenson/DeepBeachState">Deep Beach State</a>
+    year: 2020
+    description: Code for automating the detection of beach states in Argus imagery 
+  - title: <a href="https://github.com/anellenson/DecisionTree_WaveForecasts">Decision Tree Wave Forecasts</a>
+    year: 2018
+    description: Code for Decision Tree corrections of wave forecasts
+
+
+- title: Conference Awards
+  type: time_table
+  contents:
+    - year: 2019
+      items:
+        - Young Coastal Scientists and Engineers, Best Presentation
+    - year: 2018
+      items:
+        - Marine Energy Technology Symposium, Best Poster
