@@ -11,6 +11,7 @@ related_publications: true
 
 <h3>Where in my region is most ideal to place a wave device? </h3>
 
+<center>
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
         {% include video.liquid path="assets/video/seamod_video.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true %}
@@ -19,8 +20,9 @@ related_publications: true
 <div class="caption">
     Demonstration of the wave metric dashboard, SEAMOD. Users can select a region of interest and get seasonal, annual, or monthly statistics of different wave metrics.
 </div>
+</center>
 
-I helped to develop a dashboard for wave energy developers, where they could slect an area of interest and get information about the region's wave resource. 
+I helped to develop a wave energy resource dashboard, where wave energy developers could select an area of interest and get information about the region's wave resource. This helps wave energy developers to select the right site to place their device.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -28,7 +30,7 @@ I helped to develop a dashboard for wave energy developers, where they could sle
     </div>
 </div>
 <div class="caption">
-    Example of a user selecting a point and getting information about the wave variables. 
+    Example of a wave variables that are available at a point. 
 </div>
 
 
@@ -43,7 +45,7 @@ The data variables included both raw information usually available in wave hindc
     Different wave variables provided in SEAMOD. The black are the original output from the wave hindcast, and the blue are calculated.
 </div>
 
-The wave information was sourced from <a href="https://polar.ncep.noaa.gov/waves/hindcasts/nopp-phase1.php"> a thirty year hindcast of wave data provided by NCEP. </a> It included 15 different grids to ranging from 55 to 8 km in resolution.
+The wave information was sourced from <a href="https://polar.ncep.noaa.gov/waves/hindcasts/nopp-phase1.php"> a thirty year hindcast of wave data provided by the National Center for Environmental Prediction. </a> It included 15 different grids to ranging from 55 to 8 km in resolution.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -57,10 +59,10 @@ The wave information was sourced from <a href="https://polar.ncep.noaa.gov/waves
     </div>
 </div>
 <div class="caption">
-    Three examples of grids provided in the hindcast. 
+    Three examples of grids provided in the hindcast from National Center for Environmental Prediction.
 </div>
 
-The gridded data were post-processed to calculate additional variables for SEAMOD. I performed the post-processing on a Digital Ocean server, and used Dask and X-Array. The equations were reformatted into matrix calculations to allow for parallel processing (i.e., the arrays were flattened, and additional dimensions were added or removed as necessary).
+I performed the post-processing on a Digital Ocean server, and used Dask and X-Array. The equations were reformatted into matrix calculations to allow for parallel processing (i.e., the arrays were flattened, and additional dimensions were added or removed as necessary).
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">

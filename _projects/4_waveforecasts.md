@@ -8,16 +8,18 @@ category: PhD
 related_publications: true
 ---
 
+<h3> What are the mechanisms by which a wave model mis-forecasts a large wave event? </h3> 
+
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/extrememodeling/timeseries_permutations.jpg" title="Wave Height Time Series" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Wave height time series from buoy observations (solid black line) and modelling permutations.
+    Wave height time series from buoy observations (solid black line) and model output.
 </div>
 
-In this research, a wave model was run for three different extreme events, and the mechanisms for wave model erorr were determined. The three different extreme events all featured a strong southern wind during their peak. Models differed in terms of their wind input and physics package selected. 
+In this research, a wave model was run for three different extreme events, and the mechanisms for wave model erorr were determined. The three different extreme events all featured a strong southern wind during the peak of the time series. The models differed in terms of their wind input and physics package selected. 
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
@@ -25,10 +27,10 @@ In this research, a wave model was run for three different extreme events, and t
     </div>
 </div>
 <div class="caption">
-    Synoptic scale conditions for different time steps for a chosen event. The strong southern wind is visible throughout the event, but especially in the bottom right panel (November 17, 2009).
+    Synoptic scale conditions for different time steps for a chosen event. The colors ar ethe wind speed, and the solid lines denote pressure in millibars. The strong southern wind is visible throughout the event, but especially in the bottom right panel (November 17, 2009).
 </div>
 
-The spectral shape (variance density) of the model output and the buoy were inspected. The models that performed better had higher energy in the southern partition of the spectrum. 
+The spectral shape (variance density, or energy) of the model output and the buoy were inspected. The models that performed better had higher energy in the southern partition of the spectrum. 
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">

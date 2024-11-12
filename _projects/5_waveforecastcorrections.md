@@ -1,13 +1,13 @@
 ---
 layout: page
 title: Wave Forecast Time Series Correction 
-description: Increasing wave model accuracy and determining wave model error regimes using Machine Learning
+description: Increasing wave model accuracy and determining wave model error regimes using machine learning
 img: assets/img/decisiontree/scatterplot.jpg
 importance: 6
 category: PhD
 related_publications: true
 ---
-
+<h3> How can wave model accuracy be increased? Can patterns of wave model error be learned and defined by wave model output? </h3> 
 <br>
 <br>
 <div class="row">
@@ -24,9 +24,9 @@ related_publications: true
     <b> Right </b> Scatter plot of original wave height versus observations (left), and corrected wave height versus observations (right). 
 </div>
 
-In this paper, I correct wave height time series using a machine learning technique called bagged regression tree. The wave height output time series was taken from <a href="https://www.sciencedirect.com/science/article/abs/pii/S0960148113005922"> Wave Watch 3 </a>. The output was divided between winter and summer, and the bagged regression tree was trained on the error between wave model output (wave height time series) and observed time series (at various <a href="www.ndbc.noaa.gov"> National Data Buoy Center </a> buoys) with wave model input as features (wave height, wave direction, mean wave period). Several experiments were made with wind (wind magnitude, wind direction) as well. A final experiment was also performed where a decision tree was trained on several buoys and applied on the original buoy that was not included in the dataset in a geospatial experiment.
+In this paper, I correct wave height time series using a machine learning technique called bagged regression tree. The wave height output time series was taken from a model run for a wave energy resource assessment <a href="https://www.sciencedirect.com/science/article/abs/pii/S0960148113005922"> Wave Watch 3 </a>. The output was divided between winter and summer, and the bagged regression tree was trained on the error between wave model output (wave height time series) and observed time series (at various <a href="https://www.ndbc.noaa.gov"> National Data Buoy Center </a> buoys) with wave model input as features (wave height, wave direction, mean wave period). Several experiments were made with wind (wind magnitude, wind direction) as well. A final experiment was also performed where a decision tree was trained on several buoys and applied on the original buoy that was not included in the dataset in a geospatial experiment.
 
-The cool thing about decision tree is that it can be used to diagnose model operating conditions - which features were most important to determine wave height error? This can tell us how the model performs for different regimes defined by its own output.
+The cool thing about decision tree is that it can be used to diagnose model operating conditions by establishing correlations between model output and wave height error. This can tell us how the model performs for different regimes defined by its own output.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -34,7 +34,7 @@ The cool thing about decision tree is that it can be used to diagnose model oper
     </div>
 </div>
 <div class="caption">
-    Feature importances for summer and winter. Three experiments are shown here: 1. Summer; 2. Winter; 3. Geospatial.
+    Feature importances for summer and winter. Three experiments are shown here: 1. Summer; 2. Winter; 3. Geospatial. The acronyms stand for: Tm01 - mean wave period; 
 </div>
 
 For all three experiments, mean period was either the most or the second most important feature. This suggests that the accuracy of the wave model depended on how "developed" the sea state was; consistent over- and under- estimations might exist for different frequencies. 
@@ -48,6 +48,8 @@ For winter, wind magnitude becomes important, which is directly tied to the exis
 <div class="caption">
     Wave height scatterplots for original model output (left) and corrected model output (right). Different leaves (correction values) are colored. The orange instances were associated with high wind height coming from the south.
 </div>
+
+The code and more technical details are available in the GitHub repository and the paper below. 
 
 <div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
     {% include repository/repo.liquid repository='anellenson/DecisionTree_WaveForecasts' %}

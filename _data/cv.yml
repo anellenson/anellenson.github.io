@@ -30,7 +30,7 @@
         - Earth and Environmental Engineering
         - Concentration in Water Quality
 
-- title: Technical Skills
+- title: Skills
   type: list
   contents:
     - <b>Programming Languages:</b> Python, R, MATLAB, PostgreSQL
@@ -38,6 +38,15 @@
         data manipulation and analysis (dask, pandas, x-array), cloud computing
         (digital ocean, s3 buckets, docker), documentation (sphinx), GitHub
     - <b>Numerical Models:</b> Wavewatch III, SWAN, X-BEACH, Delft3D
+    - <b>Project Management:</b> Budgets, schedules, communication, team meetings, follow up notes
+
+- title: Coursework and Knowledge Base
+  type: list
+  contents:
+    - <b>Coastal Engineering:</b> Nearshore hydrodynamics, sediment transport, coastal structures, coastal hazards
+    - <b>Machine Learning:</b> Neural networks, decision trees, ensemble techniques, convolutional neural networks, support vector machine, k-means clustering
+    - <b>Statistics:</b> Ensemble generation, uncertainty quantification, time series analysis, hypothesis testing, regression analysis
+
 
 - title: Professional and Academic Experience
   type: time_table
@@ -84,7 +93,7 @@
         - Used decision tree as an explanatory technique to determine relationships between environmental conditions that coincided with wave model error
         - Determined geospatial relationships between 5 different buoy locations of wave height error over 5 years of wave height time series through inspection of bagged regression tree architecture
 
-- title: Open Source Code 
+- title: GitHub Repositories
   type: time_table
   contents:
   - title: <a href="https://github.com/anellenson/DeepBeachState">Deep Beach State</a>
